@@ -2,6 +2,8 @@
   --color-black: #111;
   --color-white: #ffffff;
   --color-pink: #c38d9e;
+  --header-height: 100px;
+  --footer-height: 120px;
 }
 
 html,

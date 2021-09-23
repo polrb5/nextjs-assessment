@@ -1,17 +1,17 @@
 import Link from "next/link";
-import logo from "../../public/logo.png";
 import Image from "next/image";
 import styles from "./Header.module.css";
+import Button from "../Button/Button";
 
 export default function Header() {
   return (
     <header className={styles.header}>
       <Link href="/" passHref={true}>
-        <Image src="/logo.png" alt="me" width="64" height="64" />
+        <Image src="/logo.png" alt="logo" width="64" height="64" />
       </Link>
-      <button className={styles.button}>
+      <Button>
         <Link href="/about">About</Link>
-      </button>
+      </Button>
     </header>
   );
 }
