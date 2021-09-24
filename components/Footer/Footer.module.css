@@ -1,0 +1,20 @@
+.footer {
+  height: var(--footer-height);
+  border-top: 1px solid var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.selectLang {
+  padding: 10px 15px;
+  background-color: #e27b60;
+  color: var(--color-white);
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.selectLang option {
+  cursor: pointer;
+}

@@ -3,13 +3,21 @@
   --color-white: #ffffff;
   --color-pink: #c38d9e;
   --header-height: 100px;
-  --footer-height: 120px;
+  --footer-height: 80px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
 }
 
 html,
 body {
   font-family: "Poppins";
   background-color: #41b3a3;
+  margin: 0;
+  padding: 0;
 }
 
 a {
