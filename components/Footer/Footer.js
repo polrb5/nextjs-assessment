@@ -1,33 +1,29 @@
 import { useRouter } from "next/router";
-import Link from "next/link";
 import styles from "./Footer.module.css";
 
 export default function Footer() {
   const router = useRouter();
+  const { locale, locales } = router;
+
+  const handleLocaleChange = (e) => {
+    const locale = e.target.value;
+    router.push(router.pathname, router.asPath, { locale });
+  };
+  console.log(locales);
 
   return (
     <footer className={styles.footer}>
-      <ul>
-        {router.locales.map((locale) => (
-          <li key={locale}>
-            <Link href={router.asPath} locale={locale}>
-              <a>{locale}</a>
-            </Link>
-          </li>
+      <select
+        className={styles.selectLang}
+        onChange={handleLocaleChange}
+        defaultValue={locale}
+      >
+        {locales.map((locale) => (
+          <option key={locale} value={locale}>
+            {locale}
+          </option>
         ))}
-      </ul>
-      {/* <select className={styles.selectLang} name="language" id="lang">
-        <Link href={router.asPath} passHref={true}>
-          <option locale="en-EN" value="english">
-            English
-          </option>
-        </Link>
-        <Link href={router.asPath} passHref={true}>
-          <option locale="es-ES" value="spanish">
-            Spanish
-          </option>
-        </Link>
-      </select> */}
+      </select>
     </footer>
   );
 }
