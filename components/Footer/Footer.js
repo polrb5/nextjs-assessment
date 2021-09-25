@@ -9,7 +9,6 @@ export default function Footer() {
     const locale = e.target.value;
     router.push(router.pathname, router.asPath, { locale });
   };
-  console.log(locales);
 
   return (
     <footer className={styles.footer}>

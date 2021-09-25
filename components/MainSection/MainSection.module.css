@@ -7,7 +7,7 @@
   justify-content: center;
 }
 .card {
-  padding: 25px;
+  margin-bottom: 15px;
   width: 250px;
   min-height: 350px;
   text-align: center;
@@ -39,5 +39,9 @@
   .sectionImage2 {
     width: auto;
     height: 300px;
+  }
+  .card {
+    padding: 25px;
+    margin-inline: 30px;
   }
 }
