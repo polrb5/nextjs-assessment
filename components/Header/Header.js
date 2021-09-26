@@ -2,34 +2,11 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "./Header.module.css";
 import Button from "../Button/Button";
-import { useRouter } from "next/router";
 import { useState } from "react";
+import useTranslation from "../../hooks/useTranslation";
 
 export default function Header() {
-  const router = useRouter();
-  const { locale } = router;
-
-  const lang = [
-    { tag: "greeting", valueLang: { es: "Hola", en: "Hello" } },
-    {
-      tag: "selectLanguage",
-      valueLang: { es: "Selecciona idioma", en: "Select language" },
-    },
-    { tag: "about", valueLang: { es: "Sobre", en: "About" } },
-  ];
-
-  const [words, setWords] = useState(lang);
-
-  const t = (str) => {
-    if (locale === "en-US") {
-      const result = words.find(({ tag }) => tag === str);
-      return result.valueLang.en;
-    }
-    if (locale === "es") {
-      const result = words.find(({ tag }) => tag === str);
-      return result.valueLang.es;
-    }
-  };
+  const { t, translation } = useTranslation();
 
   return (
     <header className={styles.header}>
