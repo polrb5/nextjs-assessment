@@ -1,4 +1,5 @@
 import { useRouter } from "next/router";
+import { useState } from "react";
 import useTranslation from "../../hooks/useTranslation";
 import styles from "./Footer.module.css";
 
@@ -6,8 +7,7 @@ export default function Footer() {
   const router = useRouter();
   const { locale, locales } = router;
   const { t } = useTranslation();
-  console.log(locale);
-  console.log(locales);
+
   const handleLocaleChange = (e) => {
     const locale = e.target.value;
     router.push(router.pathname, router.asPath, { locale });
@@ -22,11 +22,8 @@ export default function Footer() {
         onChange={handleLocaleChange}
         defaultValue={locale}
       >
-        {locales.map((locale) => (
-          <option key={locale} value={locale}>
-            {locale}
-          </option>
-        ))}
+        <option value={locales[0]}>English</option>
+        <option value="es">Español</option>
       </select>
     </footer>
   );
