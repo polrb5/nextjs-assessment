@@ -18,7 +18,7 @@ export default function MainSection() {
           />
           <p>{t("descriptionJellyfish")}</p>
         </div>
-        <div className={styles.card}>
+        {/*   <div className={styles.card}>
           <h2>{t("jellyfish")}</h2>
           <Image
             src="/jellyfish2.jpg"
@@ -27,7 +27,7 @@ export default function MainSection() {
             height="250"
           />
           <p>{t("descriptionJellyfish")}</p>
-        </div>
+        </div> */}
       </section>
     </main>
   );
