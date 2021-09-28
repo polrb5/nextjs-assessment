@@ -6,7 +6,7 @@ import useTranslation from "../../hooks/useTranslation";
 import styles from "../../styles/About.module.css";
 
 export default function About() {
-  const { t, translation } = useTranslation();
+  const { t } = useTranslation();
 
   return (
     <>

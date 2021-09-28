@@ -1,5 +1,4 @@
 import { useRouter } from "next/router";
-import { useState } from "react";
 import useTranslation from "../../hooks/useTranslation";
 import styles from "./Footer.module.css";
 
