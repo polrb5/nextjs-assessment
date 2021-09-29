@@ -15,29 +15,15 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <label htmlFor="select-lang">{t("selectLanguage")}:</label>
-      {locale === "en-US" && (
-        <select
-          id="select-lang"
-          className={styles.selectLang}
-          onChange={handleLocaleChange}
-          defaultValue={locale}
-        >
-          <option value={locales[0]}>English</option>
-          <option value="es">Español</option>
-        </select>
-      )}
-
-      {locale === "es" && (
-        <select
-          id="select-lang"
-          className={styles.selectLang}
-          onChange={handleLocaleChange}
-          defaultValue={locale}
-        >
-          <option value="es">Español</option>
-          <option value={locales[0]}>English</option>{" "}
-        </select>
-      )}
+      <select
+        id="select-lang"
+        className={styles.selectLang}
+        onChange={handleLocaleChange}
+        defaultValue={locale === "en-US" ? "en-US" : "es"}
+      >
+        <option value={locales[0]}>English</option>
+        <option value="es">Español</option>
+      </select>
     </footer>
   );
 }

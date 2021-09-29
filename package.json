@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@fontsource/poppins": "^4.5.0",
+    "aws-amplify": "^4.3.0",
     "aws-appsync": "^4.1.2",
     "bootstrap": "^4.6.0",
     "dotenv": "^10.0.0",
