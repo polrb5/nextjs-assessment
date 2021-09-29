@@ -9,12 +9,11 @@ export default function useTranslation() {
   const [translation, settranslation] = useState(Lang);
 
   const t = (str) => {
+    const result = translation.find(({ tag }) => tag === str);
     if (locale === "en-US") {
-      const result = translation.find(({ tag }) => tag === str);
       return result.valueLang.en;
     }
     if (locale === "es") {
-      const result = translation.find(({ tag }) => tag === str);
       return result.valueLang.es;
     }
   };

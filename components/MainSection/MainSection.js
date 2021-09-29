@@ -18,16 +18,6 @@ export default function MainSection() {
           />
           <p>{t("descriptionJellyfish")}</p>
         </div>
-        {/*   <div className={styles.card}>
-          <h2>{t("jellyfish")}</h2>
-          <Image
-            src="/jellyfish2.jpg"
-            alt="A few jellyfish"
-            width="250"
-            height="250"
-          />
-          <p>{t("descriptionJellyfish")}</p>
-        </div> */}
       </section>
     </main>
   );
