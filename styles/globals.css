@@ -2,6 +2,7 @@
   --color-black: #111;
   --color-white: #ffffff;
   --color-pink: #c38d9e;
+  --color-background: #41b3a3;
   --header-height: 100px;
   --footer-height: 80px;
 }
@@ -15,7 +16,10 @@
 html,
 body {
   font-family: "Poppins";
-  background-color: #41b3a3;
+  background: #41b3a3;
+  background: -webkit-linear-gradient(top, #41b3a3, #15989e);
+  background: -moz-linear-gradient(top, #41b3a3, #15989e);
+  background: linear-gradient(to bottom, #41b3a3, #15989e);
   margin: 0;
   padding: 0;
 }
