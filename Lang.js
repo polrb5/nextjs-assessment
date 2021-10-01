@@ -1,4 +1,4 @@
-export default [
+const Lang = [
   { tag: "greeting", valueLang: { es: "Hola", en: "Hello" } },
   {
     tag: "selectLanguage",
@@ -15,3 +15,5 @@ export default [
     },
   },
 ];
+
+export default Lang;
