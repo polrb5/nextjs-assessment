@@ -9,7 +9,7 @@
 .selectLang {
   margin-left: 10px;
   padding: 10px 15px;
-  background-color: #e27b60;
+  background-color: var(--color-secondary);
   color: var(--color-white);
   border: 0;
   border-radius: 5px;
