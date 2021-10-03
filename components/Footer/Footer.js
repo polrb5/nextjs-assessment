@@ -5,9 +5,9 @@ import useTranslation from "../../hooks/useTranslation";
 import styles from "./Footer.module.css";
 
 export default function Footer() {
+  const { localeLang, setLocaleLang } = useContext(LocaleContext);
   const router = useRouter();
   const { t } = useTranslation();
-  const { localeLang, setLocaleLang } = useContext(LocaleContext);
 
   const handleLocaleChange = (e) => {
     const locale = e.target.value;

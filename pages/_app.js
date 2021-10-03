@@ -1,12 +1,15 @@
 import "../styles/globals.css";
 import "@fontsource/poppins";
 import Layout from "../components/Layout/Layout";
+import { LocaleContextProvider } from "../context/LocaleContextProvider";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <LocaleContextProvider>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </LocaleContextProvider>
   );
 }
 

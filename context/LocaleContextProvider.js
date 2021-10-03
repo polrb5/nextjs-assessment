@@ -6,7 +6,6 @@ export const LocaleContextProvider = (props) => {
   const { children } = props;
   const router = useRouter();
   const { locale } = router;
-
   const [localeLang, setLocaleLang] = useState(locale);
 
   return (
