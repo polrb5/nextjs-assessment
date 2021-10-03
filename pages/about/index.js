@@ -12,7 +12,7 @@ export default function About() {
     <>
       <div className={styles.sectionTop}>
         <Button>
-          <Link href={{ pathname: "/" }}>{t("goHome")}</Link>
+          <Link href="/">{t("goHome")}</Link>
         </Button>
       </div>
       <MainSection />

@@ -11,9 +11,7 @@ export default function Header() {
     <header className={styles.header}>
       <Image src="/logo.png" alt="logo" width="64" height="64" />
       <Button>
-        <Link href={{ pathname: "/about" }} passHref>
-          {t("about")}
-        </Link>
+        <Link href="/about">{t("about")}</Link>
       </Button>
     </header>
   );
