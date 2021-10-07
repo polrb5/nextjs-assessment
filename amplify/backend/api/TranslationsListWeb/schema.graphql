@@ -1,0 +1,10 @@
+type Translation @model {
+  id: ID!
+  tag: String
+  valueLang: TranslationValue
+}
+
+type TranslationValue {
+  es: String
+  en: String
+}
