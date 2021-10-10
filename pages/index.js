@@ -1,13 +1,17 @@
-import { useState } from "react";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { fetchTranslations } from "../src/redux/slices/translations";
 import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
 import MainSection from "../components/MainSection/MainSection";
-/* import { API } from "aws-amplify";
-import { listTranslations } from "../src/graphql/queries"; */
 
-export default function Home(/* { items } */) {
-  /*   const [translations, setTranslations] = useState(items);
-  console.log(translations); */
+export default function Home() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchTranslations());
+  }, [dispatch]);
+
   return (
     <>
       <Header />
@@ -16,15 +20,3 @@ export default function Home(/* { items } */) {
     </>
   );
 }
-
-/* export async function getStaticProps() {
-  const {
-    data: {
-      listTranslations: { items },
-    },
-  } = await API.graphql({ query: listTranslations });
-  return {
-    props: { items },
-  };
-}
- */

@@ -1,8 +1,10 @@
 import { useContext, useEffect, useState } from "react";
 import { LocaleContext } from "../context/LocaleContext";
+import { useSelector } from "react-redux";
 
 export default function useTranslation() {
-  const { localeLang, translations } = useContext(LocaleContext);
+  const { localeLang } = useContext(LocaleContext);
+  const { translations } = useSelector((state) => state.translations);
 
   const t = (str) => {
     const result = translations.find(({ tag }) => tag === str);
@@ -15,7 +17,6 @@ export default function useTranslation() {
       }
     }
     if (!result) {
-      console.log(str);
       // throw new Error("This word can't be translated");
     }
   };
