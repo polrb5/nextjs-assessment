@@ -1,5 +1,8 @@
 .containerSection {
   min-height: calc(100vh - (var(--footer-height) + var(--header-height)));
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .section {
   display: flex;
