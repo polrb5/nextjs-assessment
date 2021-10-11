@@ -11,7 +11,7 @@ export const LocaleContextProvider = (props) => {
   const [localeLang, setLocaleLang] = useState(locale);
 
   return (
-    <LocaleContext.Provider value={{ localeLang, setLocaleLang, translations }}>
+    <LocaleContext.Provider value={{ localeLang, setLocaleLang }}>
       {children}
     </LocaleContext.Provider>
   );
