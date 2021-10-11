@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import { LocaleContext } from "../context/LocaleContext";
 import { useSelector } from "react-redux";
 

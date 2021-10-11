@@ -9,19 +9,6 @@ export const LocaleContextProvider = (props) => {
   const router = useRouter();
   const { locale } = router;
   const [localeLang, setLocaleLang] = useState(locale);
-  const [translations, setTranslations] = useState([]);
-
-  useEffect(() => {
-    const pullData = async () => {
-      const {
-        data: {
-          listTranslations: { items },
-        },
-      } = await API.graphql({ query: listTranslations });
-      setTranslations(items);
-    };
-    pullData();
-  }, []);
 
   return (
     <LocaleContext.Provider value={{ localeLang, setLocaleLang, translations }}>
