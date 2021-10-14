@@ -11,13 +11,13 @@ Amplify.configure(awsconfig);
 
 function MyApp({ Component, pageProps }) {
   return (
-    <LocaleContextProvider>
-      <Provider store={store}>
+    <Provider store={store}>
+      <LocaleContextProvider>
         <Layout>
           <Component {...pageProps} />
         </Layout>
-      </Provider>
-    </LocaleContextProvider>
+      </LocaleContextProvider>
+    </Provider>
   );
 }
 

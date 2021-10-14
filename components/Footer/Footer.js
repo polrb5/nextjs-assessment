@@ -1,17 +1,13 @@
 import { useRouter } from "next/router";
-import { useContext, useEffect } from "react";
+import { useCallback, useContext, useEffect, useState } from "react";
 import { LocaleContext } from "../../context/LocaleContext";
 import useTranslation from "../../hooks/useTranslation";
 import styles from "./Footer.module.css";
 
 export default function Footer() {
-  const { localeLang, setLocaleLang } = useContext(LocaleContext);
+  const { localeLang, setLocaleLang, tags } = useContext(LocaleContext);
   const router = useRouter();
   const { t } = useTranslation();
-
-  useEffect(() => {
-    localStorage.setItem("locale", localeLang);
-  }, [localeLang]);
 
   const handleLocaleChange = (e) => {
     const locale = e.target.value;
@@ -21,7 +17,7 @@ export default function Footer() {
 
   return (
     <footer className={styles.footer}>
-      <label htmlFor="select-lang">{t("selectLanguage")}:</label>
+      <label htmlFor="select-lang">{t(tags.selectLanguage)}:</label>
       <select
         id="select-lang"
         className={styles.selectLang}
