@@ -1,11 +1,12 @@
 import { useRouter } from "next/router";
-import { useCallback, useContext, useEffect, useState } from "react";
+import { useContext } from "react";
 import { LocaleContext } from "../../context/LocaleContext";
 import useTranslation from "../../hooks/useTranslation";
 import styles from "./Footer.module.css";
 
-export default function Footer() {
-  const { localeLang, setLocaleLang, tags } = useContext(LocaleContext);
+export default function Footer(props) {
+  const { tags } = props;
+  const { localeLang, setLocaleLang } = useContext(LocaleContext);
   const router = useRouter();
   const { t } = useTranslation();
 

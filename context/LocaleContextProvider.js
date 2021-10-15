@@ -8,7 +8,7 @@ export const LocaleContextProvider = (props) => {
   const router = useRouter();
   const { locale } = router;
   const [localeLang, setLocaleLang] = useState(locale);
-  const { translations, loading } = useSelector((state) => state.translations);
+  const { translations } = useSelector((state) => state.translations);
   const [tags, setTags] = useState({});
 
   useEffect(() => {

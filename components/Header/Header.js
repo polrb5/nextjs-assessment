@@ -1,14 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./Header.module.css";
-import { LocaleContext } from "../../context/LocaleContext";
 import useTranslation from "../../hooks/useTranslation";
 import Button from "../Button/Button";
-import { useContext } from "react";
 
-export default function Header() {
+export default function Header(props) {
+  const { tags } = props;
   const { t } = useTranslation();
-  const { tags } = useContext(LocaleContext);
 
   return (
     <header className={styles.header}>

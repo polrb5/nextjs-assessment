@@ -1,12 +1,10 @@
 import Image from "next/image";
-import { useContext } from "react";
-import { LocaleContext } from "../../context/LocaleContext";
 import useTranslation from "../../hooks/useTranslation";
 import styles from "./MainSection.module.css";
 
-export default function MainSection() {
+export default function MainSection(props) {
+  const { tags } = props;
   const { t } = useTranslation();
-  const { tags } = useContext(LocaleContext);
 
   return (
     <main className={styles.containerSection}>
