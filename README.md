@@ -1,1 +1,1 @@
-Deployment: https://nextjs-assessment-pol-reig.netlify.app/
+Deployment: https://nextjs-multi-language-pol-reig.netlify.app
